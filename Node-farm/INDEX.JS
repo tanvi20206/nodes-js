@@ -46,8 +46,8 @@ const dataObj = JSON.parse(data);
 const server = http.createServer((req, res) => {
   // istconsole.log(req.url);
   console.log(url.parse(req.url,true)); // parse the url into objects
- // const { query, pathname } = url.parse(req.url, true);
-  const pathname = req.url;
+ const { query, pathname } = url.parse(req.url, true);
+  //const pathname = req.url;
 
   // OVERVIEW PAGE
   if (pathname === '/' || pathname === '/overview') {
